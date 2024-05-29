@@ -38,7 +38,13 @@ public class GetMethodQuiz08 extends HttpServlet {
 		// 내가 쓴 방법 - for문
 		for (int i = 0; i < list.size(); i++) {
 			if (list.get(i).contains(search)) {
+				// 1번 방식 - replace)
 				String sentense = list.get(i).replaceAll(search, "<b>" + search + "</b>"); // 내가 검색한 단어를 b태그로 강조
+				// 2번 방식 - split)  
+//				String[] sentense = list.get(i).split(search); // 맛집을 기준으로 앞, 뒤로 나눈다.
+//				out.print(sentense[0] + "<b>" + search + "</b>" + sentense[1] + "<br>");				
+				
+				// 1번 방식 출력창 
 				out.print(sentense + "<br>");
 			}
 		}
