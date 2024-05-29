@@ -15,6 +15,7 @@ public class GetMethodEx03 extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
 		// git 테스트용 주석 추가(240528)
+		// git 테스트용 주석 추가(240529)
 		
 		response.setCharacterEncoding("utf-8");
 //		response.setContentType("text/plain");
