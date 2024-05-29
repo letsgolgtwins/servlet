@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Test</display-name>
+  
+  <!-- ex01 -->
+  <servlet>
+  	<servlet-name>UrlMappingEx01</servlet-name>
+  	<servlet-class>com.test.lesson01.UrlMappingEx01</servlet-class> <!-- ctrl + 마우스 커서 올려서 들어가지는지 꼭 확인 -->
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>UrlMappingEx01</servlet-name>
+  	<url-pattern>/lesson01/ex01</url-pattern> <!-- 반드시! / 를 널어준다 -->
+  </servlet-mapping>
+  
+  <!-- Quiz01 -->
+  <servlet>
+  	<servlet-name>UrlMappingQuiz01</servlet-name>
+  	<servlet-class>com.test.lesson01.UrlMappingQuiz01</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>UrlMappingQuiz01</servlet-name>
+  	<url-pattern>/lesson01/Quiz01</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Quiz02 -->
+  <servlet>
+  	<servlet-name>UrlMappingQuiz02</servlet-name>
+  	<servlet-class>com.test.lesson01.UrlMappingQuiz02</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>UrlMappingQuiz02</servlet-name>
+  	<url-pattern>/lesson01/Quiz02</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 이렇게 클래스가 새롭게 추가될때마다 새로이 추가해줘야 하는 번거로움과 
+  데이터가 계속 쌓이는 단점이 있다. 그러므로 이제부터 xml은 안쓴다. -->
+  
+</web-app>
