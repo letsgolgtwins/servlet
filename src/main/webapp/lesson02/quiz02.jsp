@@ -13,8 +13,8 @@
 	<div class="container">
 		<h1>날짜, 시간 링크</h1><br>
 		<form>
-		<a href="/lesson02/quiz02_1.jsp" class="btn btn-primary">현재 시간 확인</a>
-		<a href="/lesson02/quiz02_2.jsp" class="btn btn-success">현재 날짜 확인</a>
+		<a href="/lesson02/quiz02_time.jsp" class="btn btn-primary">현재 시간 확인</a>
+		<a href="/lesson02/quiz02_date.jsp" class="btn btn-success">현재 날짜 확인</a>
 		</form>
 	</div>
 </body>
