@@ -11,10 +11,10 @@
 </head>
 <body>
 	<div class="container d-flex">
-		<h2>체격 조건 입력</h2>
+		<h1>체격 조건 입력</h1>
 	</div>
 	<div class="container d-flex">
-		<form action="/lesson02/quiz03_calculate.jsp" class="d-flex">
+		<form action="/lesson02/quiz03_calculate.jsp" method="get" class="d-flex">
 			<input type="text" name="height" class="form-control col-4" placeholder="키를 입력하세요">
 			<div class="d-flex align-items-end ml-1 mr-2">
 				cm
@@ -23,7 +23,7 @@
 			<div class="d-flex align-items-end ml-1 mr-2">
 				kg
 			</div>
-			<input type="submit" value="계산" class="btn btn-info">
+			<input type="submit" value="계산" class="btn btn-primary">
 		</form>
 	</div>	
 </body>
