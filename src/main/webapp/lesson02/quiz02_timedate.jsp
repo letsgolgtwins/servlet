@@ -14,13 +14,23 @@
 </head>
 <body>
 		<% // 자바 영역	
-		// date
+		// request params
+		String type = request.getParameter("type");
+		
+		//
 		Date now = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("HH시 mm분 ss초");
-		String timeNow = sdf.format(now);		
+		
+		// if문		
+		SimpleDateFormat sdf = null;
+		if (type.equals("time")) {
+			sdf = new SimpleDateFormat("HH시 mm분 ss초 입니다.");
+		} else {
+			sdf = new SimpleDateFormat("오늘의 날짜는 yyyy년 M월 dd일 입니다.");
+		}
+		String timeNow = sdf.format(new Date()); //어디를 줄일 수 있는지 눈여겨볼 것.
 		%>
 	<div class="container d-flex justify-content-center">
-		<h2>현재 시간은 <%= timeNow %> 입니다.</h2>
+		<div class="display-4"><%= timeNow %></div>
 	</div>
 </body>
 </html>

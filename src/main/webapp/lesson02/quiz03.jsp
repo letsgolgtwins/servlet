@@ -23,7 +23,7 @@
 			<div class="d-flex align-items-end ml-1 mr-2">
 				kg
 			</div>
-			<input type="submit" value="계산" class="btn btn-success">
+			<input type="submit" value="계산" class="btn btn-info">
 		</form>
 	</div>	
 </body>
