@@ -41,11 +41,14 @@
 	<div class="container">
 		<h1>길이 변환 결과</h1>
 		<div class="d-flex">
-			<span class="font-weight-bold display-4"><%=number %> </span> 
+			<span class="font-weight-bold display-4"> <%=number %> </span> 
 			<h4 class="d-flex align-items-end">cm</h4>	
 		</div><hr>
-		<div></div>
+		<div>
 		
+		
+		
+		</div>
 	</div>
 </body>
 </html>
