@@ -11,18 +11,21 @@
 </head>
 <body>
 	<div class="container">
-		<form action="/lesson02/quiz04_1.jsp" method="post">
+		<form action="/lesson02/quiz04_1.jsp" method="post"> 
 			<h1>길이 변환</h1>
 			<div class="d-flex">
 				<input type="text" name="number" class="form-control col-3">
 				<div class="d-flex align-items-end">cm</div>
 			</div>
-			<label>인치</label> <input type="checkbox" name="type" value="inch">
-			<label>야드</label> <input type="checkbox" name="type" value="yard">
-			<label>피트</label> <input type="checkbox" name="type" value="peet">
-			<label>미터</label> <input type="checkbox" name="type" value="meter"><br>
-			<input type="submit" value="변환하기" class="btn btn-success">
+			<div>
+				<label>인치 <input type="checkbox" name="type" value="inch"></label>
+				<label>야드 <input type="checkbox" name="type" value="yard"></label>
+				<label>피트 <input type="checkbox" name="type" value="feet"></label>
+				<label>미터 <input type="checkbox" name="type" value="meter"></label>
+			</div>
+				<input type="submit" value="변환하기" class="btn btn-success">
 		</form>	
+		<!-- <label>라벨 태그 만들 때 바깥쪽으로 아예 감싸는 되는 걸 유의할 것! -->
 	</div>
 </body>
 </html>
