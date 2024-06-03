@@ -97,31 +97,24 @@
 
 			// request params
 			String food = request.getParameter("food");
+			// 4점 이하 제외 체크: true / 체크 안 됨: null
 			String starFilter = request.getParameter("starFilter");
-
-			// if문 만약에 치킨 검색 -> 
+			// 모범답안
+			// boolean exclude = starFilter != null; // 4점 이하 재외
 
 			for (int i = 0; i < list.size(); i++) {
 				// out.print(list.get(i)); 중간 점검 이제 여기서부터 Map
-
-				//Iterator<String> iter = map.keySet().iterator();
-				//while (iter.hasNext()) {
-					//String key = iter.next();
-
-					//if (starFilter.equals("true")) {
-					//	list.get(i).get("point") >= 4.0;
-					//}
-					double point = (double) list.get(i).get("point");
-					if (list.get(i).get("menu").equals(food) && (starFilter == null || point > 4.0)) {
-						// 그 food키인 모든 벨류들을 다 출력?
+				double point = (double) list.get(i).get("point");
+				if (list.get(i).get("menu").equals(food) && (starFilter == null || point > 4.0)) {
+					// skip 조건이 체크되어있고 스킵 되어야 할 때 skip(continue)
 			%>
 			<tr>
-				<th><%=list.get(i).get("menu")%></th>
+				<td><%=list.get(i).get("menu")%></td>
 				<td><%=list.get(i).get("name")%></td>
 				<td><%=list.get(i).get("point")%></td>
 			</tr>
 			<%
-			}
+				}
 			}
 			%>
 		</tbody>
