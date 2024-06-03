@@ -28,7 +28,8 @@
 	<div id="wrap" class="container">
 		<header></header>
 		<nav></nav>
-		<section class="contents"></section>	
+		<section class="contents"></section>
+		<footer></footer>	
 	
 	</div>
 </body>

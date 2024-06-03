@@ -37,6 +37,9 @@
 	.nav {
 		background-color: red;
 	}
+	.nav-link {
+	
+	}
 </style>
 </head>
 <body>
