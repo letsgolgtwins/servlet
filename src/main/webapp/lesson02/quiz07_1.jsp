@@ -111,10 +111,9 @@
 					//if (starFilter.equals("true")) {
 					//	list.get(i).get("point") >= 4.0;
 					//}
-					
-					if (list.get(i).get("menu").equals(food)) {
+					double point = (double) list.get(i).get("point");
+					if (list.get(i).get("menu").equals(food) && (starFilter == null || point > 4.0)) {
 						// 그 food키인 모든 벨류들을 다 출력?
-					
 			%>
 			<tr>
 				<th><%=list.get(i).get("menu")%></th>
