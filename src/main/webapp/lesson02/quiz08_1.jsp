@@ -63,40 +63,25 @@
 	<% // 보여줄 책 정보 뽑아내기
 	// request params
 	int id = Integer.valueOf(request.getParameter("id"));	
-	for (int i = 0 ; i < list.size(); i++) {
-		if (list.get(i).get("id").equals(1000)) {
-			Object link = list.get(i).get("image");
-			Object title = list.get(i).get("title");
-			Object author = list.get(i).get("author");
-			Object publisher = list.get(i).get("publisher");			
-		} else if (list.get(i).get("id").equals(1001)) {
-			Object link = list.get(i).get("image");
-			Object title = list.get(i).get("title");
-			Object author = list.get(i).get("author");
-			Object publisher = list.get(i).get("publisher");
-		} else if(list.get(i).get("id").equals(1002)) {
-			Object link = list.get(i).get("image");
-			Object title = list.get(i).get("title");
-			Object author = list.get(i).get("author");
-			Object publisher = list.get(i).get("publisher");
-		} else if(list.get(i).get("id").equals(1003)) {
-			Object link = list.get(i).get("image");
-			Object title = list.get(i).get("title");
-			Object author = list.get(i).get("author");
-			Object publisher = list.get(i).get("publisher");
-		}
-	}
 	
+	for (int i = 0 ; i < list.size() ; i++) {
+		if (list.get(i).get("id").equals(id)) {
+			
+		
 	%>
 	<div class="container">
 		<div class="d-flex">
+			<img width="150" height="200" alt="표지" src="<%= list.get(i).get("image")%>">
 			<div>
-				<img width="150" height="200" alt="사진" src="<%= link%>">
-			</div>
-			<div class="display-4">
-				<%= %>
+				<h1><b><%= list.get(i).get("title") %></b></h1>
+				<h2 class="text-info"><%= list.get(i).get("author") %></h2>
+				<h3><%= list.get(i).get("publisher") %></h3>
 			</div>
 		</div>
-	</div>
+	</div>	
+	<%	
+		}
+	}
+	%>
 </body>
 </html>
