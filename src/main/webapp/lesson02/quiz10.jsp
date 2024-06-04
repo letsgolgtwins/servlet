@@ -137,7 +137,7 @@
 				<div>
 					<img width="200" height="200" alt="아티스트사진" src="<%= artistInfo.get("photo")%>">
 				</div>
-				<div>
+				<div class="ml-3">
 					<h3>아이유</h3>
 					<div>엔터테인먼트</div>
 					<div>2008데뷔</div>
