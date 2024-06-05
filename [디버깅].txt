@@ -1,0 +1,11 @@
+[디버깅]
+
+** 디버깅이 중요하다. **
+의심이가는 부분, 특히 selectQuery, insertQuery위치에 
+breakpoint을 찍는다.
+그러고 f6번을 이용하여 확인한다.
+디버깅이 끝나면 breakpoint를 제거해야 하는데 일일히 하기 귀찮으므로
+우측 상단 breakpoint탭에서 ctrl a delete를 해준다
+
+그럼에도 불구하고 안된다?
+상단 메뉴의 project 들어가서 > clean > clean
