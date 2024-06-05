@@ -148,17 +148,17 @@ musicList.add(musicInfo);
 		<% // 자바 영역
 		// request params
 		// a태그로 들어올 경우
-		Integer id = null;
-		if (request.getParameter("id") != null) {
-			id = Integer.valueOf(request.getParameter("id"));			
-		}
+		Integer	id = null; // int형은 기본형이어서 null을 받지 못한다. 그러므로 참조형인 Integer로 해준다.
+		if (id != null) {
+			id = Integer.valueOf(request.getParameter("id"));
+		}		
 	 	// 검색창에 검색해서 들어올 경우
 		String search = request.getParameter("search");
 		%>
 		
 		<%
 		for (int i = 0 ; i < musicList.size() ; i++) {
-			if (request.getParameter("id") != null && id == (int) musicList.get(i).get("id") || search != null && search.equals((String)musicList.get(i).get("title"))) {
+			if (id != null && id.equals((int)musicList.get(i).get("id")) || search != null && search.equals((String)musicList.get(i).get("title"))) {
 				Object title1 = musicList.get(i).get("title");
 				Object singer = musicList.get(i).get("singer");
 				Object album = musicList.get(i).get("album");
