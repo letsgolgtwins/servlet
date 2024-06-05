@@ -132,7 +132,7 @@ musicList.add(musicInfo);
 				<div></div>
 			</header>
 		</form>
-		<nav class= d-flex">
+		<nav class= "d-flex">
 			<div class="left d-flex align-items-center font-weight-bold">
 				<ul class="nav nav-fill w-100">
 					<li class="nav-item">멜론차트</li>
@@ -147,17 +147,18 @@ musicList.add(musicInfo);
 		
 		<% // 자바 영역
 		// request params
-		// 밑에 a태그 
-		int id = Integer.valueOf(request.getParameter("id"));
-	 	// 검색창 여
+		// a태그로 들어올 경우
+		Integer id = null;
+		if (request.getParameter("id") != null) {
+			id = Integer.valueOf(request.getParameter("id"));			
+		}
+	 	// 검색창에 검색해서 들어올 경우
 		String search = request.getParameter("search");
-		// 예외처리를 해줘야 하는 에러가 뜨는데 애초에 일반 for문을 사용하면 안되는 거였나?
 		%>
 		
 		<%
-		if (request.getParameter("id") != null) {
 		for (int i = 0 ; i < musicList.size() ; i++) {
-			if (id == (int) musicList.get(i).get("id")) {
+			if (request.getParameter("id") != null && id == (int) musicList.get(i).get("id") || search != null && search.equals((String)musicList.get(i).get("title"))) {
 				Object title1 = musicList.get(i).get("title");
 				Object singer = musicList.get(i).get("singer");
 				Object album = musicList.get(i).get("album");
@@ -200,11 +201,7 @@ musicList.add(musicInfo);
 			</div>
 			<%
 				}
-			}
-		}
-		
-		// 2. search 로 들어온 경우
-	
+			}	
 			%>
 			<div class="down">
 				<h5 class="font-weight-bold ml-3 mt-3">가사</h5>
