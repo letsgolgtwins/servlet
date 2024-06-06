@@ -9,3 +9,5 @@ breakpoint을 찍는다.
 
 그럼에도 불구하고 안된다?
 상단 메뉴의 project 들어가서 > clean > clean
+
+디버깅을 계속해서 익힐것
