@@ -200,7 +200,7 @@ musicList.add(musicInfo);
 				</div>
 			</div>
 			<%
-				}
+				} // 변경사항
 			}	
 			%>
 			<div class="down">
