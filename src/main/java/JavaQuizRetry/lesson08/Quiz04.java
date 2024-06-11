@@ -58,15 +58,19 @@ public class Quiz04 {
 		// <출력예시> 동명이인 종류 수:3
 		String memberStr = "김혜수:송강호:정우성:이민정:송강호:이민정:이민정:이정재:이병헌:이정재";
 		String[] member = memberStr.split(":");
-		int same = 0;
-		for (int i = 0; i < member.length; i++) {
-			for (int j = 0; j < member.length; j++) {
+		int resultCount = 0;
+		for (int i = 0; i < member.length - 1; i++) {
+			int sameCount = 0;
+			for (int j = i + 1; j < member.length; j++) {
 				if (member[i].equals(member[j])) {
-					same++;
+					sameCount++;
 				}
 			}
+			if (sameCount == 1) {
+				resultCount++;
+			}
 		}
-		System.out.println("동명이인 종류 수: " + same);
+		System.out.println("동명이인 종류 수: " + resultCount);
 	}
 
 }
