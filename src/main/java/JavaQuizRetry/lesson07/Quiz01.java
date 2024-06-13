@@ -62,6 +62,22 @@ public class Quiz01 {
 		System.out.println("4번째 과목의 최고 성적의 학생은 " + (maxAverageIndex + 1) + "번째 학생이고");
 		System.out.println("그 점수는 " + maxScore + "점.");
 
+		// quiz01_5. 일부 과목 평균 최고점 - 시험과목 index 3~7 의 평균이 가장 높은 학생을 구하여 출력하세요.
+		// 0 1 2 <3 4 5 6 7> 8 9
+		System.out.println();
+		int maxAvg = 0;
+		int maxAvgIndex = 0;
+		for (int i = 0; i < scores.length; i++) {
+			int sum5 = 0;
+			for (int j = 3; j <= 7; j++) {
+				// System.out.print(scores[i][j] + " "); 중간점검
+				sum5 += scores[i][j];
+			}
+			System.out.println(sum5);
+			maxAvg = i;
+		}
+		System.out.println("3~7 과목 평균이 가장 높은 학생은 " + (maxAvgIndex + 1) + "번쨰 학생이고, 평균은 " + maxAvg + "입니다.");
+		
 	}
 
 }
