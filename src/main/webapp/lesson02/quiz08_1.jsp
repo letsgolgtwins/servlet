@@ -13,7 +13,7 @@
 <body>
 	<% // 자바영역
 	
-	// 이건 알려줬어야지...
+	// 이거 하는 걸 까먹었다.
 	List<Map<String, Object>> list = new ArrayList<>();
     Map<String, Object> map = new HashMap<String, Object>() {
         { 
